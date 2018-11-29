@@ -1,0 +1,9 @@
+com\cts\casestudy\taskmanager\dao\TaskDAO.class
+com\cts\casestudy\taskmanager\repository\TaskRepository.class
+com\cts\casestudy\taskmanager\utils\TaskNotFoundException.class
+com\cts\casestudy\taskmanager\dao\TaskDAOImpl.class
+com\cts\casestudy\taskmanager\entities\Task.class
+com\cts\casestudy\taskmanager\service\TaskService.class
+com\cts\casestudy\taskmanager\service\TaskServiceImpl.class
+com\cts\casestudy\taskmanager\TaskManagerApplication.class
+com\cts\casestudy\taskmanager\controller\TaskController.class

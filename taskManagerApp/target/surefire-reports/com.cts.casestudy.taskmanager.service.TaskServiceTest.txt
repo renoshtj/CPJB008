@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.cts.casestudy.taskmanager.service.TaskServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 4, Time elapsed: 0.071 s <<< FAILURE! - in com.cts.casestudy.taskmanager.service.TaskServiceTest
+testCreateTask(com.cts.casestudy.taskmanager.service.TaskServiceTest)  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.cts.casestudy.taskmanager.service.TaskServiceTest.testCreateTask(TaskServiceTest.java:47)
+
