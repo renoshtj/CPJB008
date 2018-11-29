@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.casestudy.taskmanager.entities.Task;
-import com.cts.casestudy.taskmanager.service.TaskService;
+import com.cts.casestudy.taskmanager.service.ITaskService;
 import com.cts.casestudy.taskmanager.utils.TaskNotFoundException;
 
 @RestController
@@ -25,7 +25,7 @@ import com.cts.casestudy.taskmanager.utils.TaskNotFoundException;
 public class TaskController {
 
 	@Autowired
-	TaskService service;
+	ITaskService service;
 
 
 	/**

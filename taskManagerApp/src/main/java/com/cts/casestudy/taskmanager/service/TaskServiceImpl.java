@@ -7,20 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cts.casestudy.taskmanager.dao.TaskDAO;
+import com.cts.casestudy.taskmanager.dao.ITaskDAO;
 import com.cts.casestudy.taskmanager.entities.Task;
 import com.cts.casestudy.taskmanager.utils.TaskNotFoundException;
 
 @Transactional
 @Service
-public class TaskServiceImpl implements TaskService{
+public class TaskServiceImpl implements ITaskService{
 	
 
 	
-	private TaskDAO taskDAO;
+	private ITaskDAO taskDAO;
 	
 	@Autowired
-	public void setTaskDAO(TaskDAO taskDAO) {
+	public void setTaskDAO(ITaskDAO taskDAO) {
 		this.taskDAO = taskDAO;
 	}
 
