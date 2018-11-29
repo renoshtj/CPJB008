@@ -3,14 +3,12 @@
  */
 package com.cts.casestudy.taskmanager.service;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import com.cts.casestudy.taskmanager.dao.TaskDAOImpl;
 import com.cts.casestudy.taskmanager.entities.Task;
@@ -22,7 +20,7 @@ import com.cts.casestudy.taskmanager.repository.TaskRepositiryTestStub;
  */
 
 
-public class TaskServiceTest {
+public class ITaskServiceTest {
 
 	private TaskServiceImpl taskService;
 
@@ -41,7 +39,7 @@ public class TaskServiceTest {
 	}
 
 	/**
-	 * Test method for {@link com.cts.casestudy.taskmanager.service.TaskService#createTask(com.cts.casestudy.taskmanager.entities.Task)}.
+	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#createTask(com.cts.casestudy.taskmanager.entities.Task)}.
 	 */
 	@Test
 	public void testCreateTask() {
@@ -52,7 +50,7 @@ public class TaskServiceTest {
 	}
 
 	/**
-	 * Test method for {@link com.cts.casestudy.taskmanager.service.TaskService#findAll()}.
+	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#findAll()}.
 	 */
 	@Test
 	@Ignore
@@ -61,7 +59,7 @@ public class TaskServiceTest {
 	}
 
 	/**
-	 * Test method for {@link com.cts.casestudy.taskmanager.service.TaskService#findTask(java.lang.Integer)}.
+	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#findTask(java.lang.Integer)}.
 	 */
 	@Test
 	@Ignore
@@ -70,7 +68,7 @@ public class TaskServiceTest {
 	}
 
 	/**
-	 * Test method for {@link com.cts.casestudy.taskmanager.service.TaskService#delete(java.lang.Integer)}.
+	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#delete(java.lang.Integer)}.
 	 */
 	@Test
 	@Ignore
@@ -79,7 +77,7 @@ public class TaskServiceTest {
 	}
 
 	/**
-	 * Test method for {@link com.cts.casestudy.taskmanager.service.TaskService#updateTask(com.cts.casestudy.taskmanager.entities.Task)}.
+	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#updateTask(com.cts.casestudy.taskmanager.entities.Task)}.
 	 */
 	@Test
 	@Ignore
