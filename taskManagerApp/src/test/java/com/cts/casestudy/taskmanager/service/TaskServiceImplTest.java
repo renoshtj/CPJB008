@@ -1,26 +1,18 @@
-/**
- * 
- */
 package com.cts.casestudy.taskmanager.service;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+
+import java.util.List;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cts.casestudy.taskmanager.dao.TaskDAOImpl;
 import com.cts.casestudy.taskmanager.entities.Task;
 import com.cts.casestudy.taskmanager.repository.TaskRepositiryTestStub;
+import com.cts.casestudy.taskmanager.utils.TaskNotFoundException;
 
-/**
- * @author Renosh
- *
- */
-
-
-public class ITaskServiceTest {
+public class TaskServiceImplTest {
 
 	private TaskServiceImpl taskService;
 
@@ -53,36 +45,36 @@ public class ITaskServiceTest {
 	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#findAll()}.
 	 */
 	@Test
-	@Ignore
 	public void testFindAll() {
-		fail("Not yet implemented");
+		List<Task> taskList=taskService.findAll();
+		assertEquals(taskList.size(),1);
 	}
 
 	/**
 	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#findTask(java.lang.Integer)}.
+	 * @throws TaskNotFoundException 
 	 */
-	@Test
-	@Ignore
-	public void testFindTask() {
-		fail("Not yet implemented");
+	@Test(expected=TaskNotFoundException.class)
+	public void testFindTask() throws TaskNotFoundException {
+		taskService.findTask(new Integer(1));
 	}
 
 	/**
 	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#delete(java.lang.Integer)}.
 	 */
-	@Test
-	@Ignore
-	public void testDelete() {
-		fail("Not yet implemented");
+	@Test(expected=TaskNotFoundException.class)
+	public void testDelete() throws TaskNotFoundException {
+		taskService.delete(1);
 	}
 
 	/**
 	 * Test method for {@link com.cts.casestudy.taskmanager.service.ITaskService#updateTask(com.cts.casestudy.taskmanager.entities.Task)}.
 	 */
-	@Test
-	@Ignore
-	public void testUpdateTask() {
-		fail("Not yet implemented");
+	@Test(expected=TaskNotFoundException.class)
+	public void testUpdateTask() throws TaskNotFoundException {
+		Task task = new Task();
+		task.setTaskId(1);
+		taskService.updateTask(task);
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.cts.casestudy.taskmanager.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,10 +15,24 @@ public class TaskRepositiryTestStub implements TaskRepository{
 
 	@Override
 	public List<Task> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		Task task= new Task();
+		task.setTitle("My sample test task");
+		List<Task> taskList= new ArrayList<Task>();
+		taskList.add(task);
+		return taskList;
 	}
 
+	@Override
+	public <S extends Task> S save(S entity) {
+		entity.setTaskId(1);
+		return entity;
+	}
+	
+	@Override
+	public Optional<Task> findById(Integer id) {
+		Optional<Task> optional = Optional.empty();		
+		return optional;
+	}
 	@Override
 	public List<Task> findAll(Sort sort) {
 		// TODO Auto-generated method stub
@@ -80,19 +95,6 @@ public class TaskRepositiryTestStub implements TaskRepository{
 
 	@Override
 	public Page<Task> findAll(Pageable pageable) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends Task> S save(S entity) {
-		// TODO Auto-generated method stub
-		entity.setTaskId(1);
-		return entity;
-	}
-
-	@Override
-	public Optional<Task> findById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
