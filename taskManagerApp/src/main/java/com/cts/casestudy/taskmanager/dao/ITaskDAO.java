@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import com.cts.casestudy.taskmanager.entities.Task;
 
-public interface TaskDAO {
+public interface ITaskDAO {
 
 	public Task save(Task task);
 	

@@ -5,7 +5,7 @@ import java.util.List;
 import com.cts.casestudy.taskmanager.entities.Task;
 import com.cts.casestudy.taskmanager.utils.TaskNotFoundException;
 
-public interface TaskService {
+public interface ITaskService {
 
 	public Task createTask(Task task) ;
 

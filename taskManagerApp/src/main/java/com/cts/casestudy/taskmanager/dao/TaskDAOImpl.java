@@ -10,7 +10,7 @@ import com.cts.casestudy.taskmanager.entities.Task;
 import com.cts.casestudy.taskmanager.repository.TaskRepository;
 
 @Repository
-public class TaskDAOImpl implements TaskDAO {
+public class TaskDAOImpl implements ITaskDAO {
 
 	
 	private TaskRepository taskRepository;
